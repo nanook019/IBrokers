@@ -10,7 +10,7 @@ twsPortfolioValue.eWrapper <- function(x, zero.pos=TRUE, ...) {
 twsPortfolioValue.AccountUpdate <- function(x, zero.pos=TRUE, ...) {
   portf <- do.call(rbind,
                    lapply(x[[2]], function(x) 
-                   data.frame(local=x$contract$local,
+                   data.frame(local=x$contract$symbol,
                               sectype=x$contract$sectype,
                               marketValue=x[[2]]$marketValue, 
                               averageCost=x[[2]]$averageCost*x[[2]]$position,
